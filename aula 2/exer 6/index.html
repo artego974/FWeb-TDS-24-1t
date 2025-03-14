@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EletroMax</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: black;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header h1 {
+            color: white;
+            margin-left: 20px;
+        }
+        header img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+        main {
+            text-align: center;
+        }
+        .container {
+            background-color: #0099ff;
+            width: 100%;
+            max-width: 1257px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container h2 {
+            font-size: larger;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 20px;
+        }
+        .cubo-container {
+            display: flex;
+            gap: 20px;
+        }
+        .cubo {
+            height: 200px;
+            width: 200px;
+            background-color: #3c3a35d6;
+
+        }
+        .cubo img{
+            margin-top: 10px;
+            height: 75%;
+            width: 75%;
+        }
+        .cubo p{
+            font-size: 20px;
+            color: wheat;
+        }
+        footer {
+            background-color: black;
+            padding: 25px;
+            text-align: center;
+        }
+        footer p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jfif" alt="logo loja">
+        <h1>EletroMax a empresa do futuro⚡</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Os nossos produtos são únicos!!</h2>
+            <div class="cubo-container">
+                <div id="cb1" class="cubo"><img src="https://th.bing.com/th/id/OIP.4wznIUV-ZexJXq12Ny7HAAHaEb?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="computador"><p>Computador hello kitty</p></div>
+                <div id="cb2" class="cubo"><img src="https://th.bing.com/th/id/OIP.2hzJpTUqJR6k7Fe0jyfS2wHaHa?w=208&h=208&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="celular"><p>Celular Nokia rosinha</p></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 EletroMax - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
