@@ -1,47 +1,49 @@
 
-html{
-    width: 100%;
-    height: 100%;
-}
-body{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #B22222;
-}
-header{
-    background-color: black;
-    height: 10%;
-    width: 100%;
-    color: #fff;
+main {
+    width: 70%;
+    background-color: #fff;
+    margin: 8% auto;
     padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
 }
-header img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50px;
-    margin-right: 80px;
-    margin-left: -120px;
+
+h1 {
+    font-size: xx-large;
+    font-weight: bolder;
 }
-nav{
+
+.divisor {
+    width: 100%;
+    height: 2px;
     background-color: #333;
-    color: #fff;
+    margin: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+}
+
+.quadrado {
+    width: 30%;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
     padding: 10px;
     text-align: center;
-    border-radius: 20px;
-    height: 50%;
-    width: 70%;
-    font-size: x-large;
+    background-color: #f8f8f8;
 }
-.menu-opcoes{
-    display: flex;
-    justify-content: space-evenly;
+
+.quadrado img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #333;
 }
-a:link,:visited{
-    color: white;
-    text-decoration: none;
+
+.quadrado h2 {
+    margin: 10px 0;
 }
