@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            background-color: #333;
+            font-family: sans-serif;
+        }
+
+        main {
+            margin-top: 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            gap: 20px; 
+        }
+
+        .linha {
+            display: flex;
+            gap: 20px; 
+        }
+
+        .bloco {  
+            width: 200px;
+            height: 300px;
+            border: 2px solid #333;
+            text-align: center;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px;
+        }
+
+        .bloco img {
+            margin-top: 10px;
+            height: 100px;
+            width: 100px;
+        }
+
+        .bloco h2 {
+            font-size: 1.2rem;
+            font-weight: bolder;
+            margin: 10px 0 5px 0;
+        }
+
+        .bloco p {
+            font-size: 0.9rem;
+        }
+
+        .personagem {
+            width: 100%;
+            height: 100%;
+        }
+
+        .personagem[data-classe="healer"] { background-color: green; }
+        .personagem[data-classe="tank"] { background-color: blue; }
+        .personagem[data-classe="mago"] { background-color: gray; }
+        .personagem[data-classe="assasino"] { background-color: rgb(29, 23, 23); }
+        .personagem[data-classe="necromante"] { background-color: purple; }
+        .personagem[data-classe="monstro"] { background-color: blueviolet; }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="linha">
+            <div class="bloco">
+                <div class="personagem" data-classe="healer">
+                    <img src="healer.jfif" alt="healer">
+                    <h2>Healer</h2>
+                    <p>Cura os aliados e faz com que tenha um desempenho importante na batalha</p>
+                </div>
+            </div>
+            <div class="bloco">
+                <div class="personagem" data-classe="tank">
+                    <img src="tank.jfif" alt="tank">
+                    <h2>Tank</h2>
+                    <p>Classe que vai na frente, tem mais vida e é uma das mais fortes classes</p>
+                </div>
+            </div>
+            <div class="bloco">
+                <div class="personagem" data-classe="mago">
+                    <img src="mago.jfif" alt="mago">
+                    <h2>Mago</h2>
+                    <p>Classe suporte que normalmente fica atrás, importante na batalha</p>
+                </div>
+            </div>
+        </div>
+        <div class="linha">
+            <div class="bloco">
+                <div class="personagem" data-classe="assasino">
+                    <img src="assassino.jfif" alt="assasino">
+                    <h2>Assassino</h2>
+                    <p>Classe com maior dano e normalmente abate mais fácil e rápido os inimigos</p>
+                </div>
+            </div>
+            <div class="bloco">
+                <div class="personagem" data-classe="necromante">
+                    <img src="necromante.jfif" alt="necromante">
+                    <h2>Necromante</h2>
+                    <p>Utiliza das sombras para invocar monstros poderosos para lutar por ele</p>
+                </div>
+            </div>
+            <div class="bloco">
+                <div class="personagem" data-classe="monstro">
+                    <img src="monstro.jfif" alt="monstro">
+                    <h2>Monstro</h2>
+                    <p>Coisas hostis que normalmente têm níveis variados e poderes únicos</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
