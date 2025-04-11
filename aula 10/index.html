@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    a:link{
+        color: blue;
+    }
+    a:visited{
+        color: red;
+    }
+    a:active{
+        color: black;
+    }
+    li:first-child{
+        color: red;
+    }
+    li:last-child{
+        color: blue;
+    }
+    li:nth-child(3){
+        color: aquamarine;
+    }
+    p::first-letter{
+        font-size: 200px;
+    }
+    p::first-line{
+        font-style: italic;
+    }
+    a::before{
+        content: "%";
+    }
+    a::after{
+        content: "%";
+    }
+    p{
+        text-shadow: 7px 6px 2px red ;
+        opacity: 0.3;
+        background-color: rgba(255, 250, 240, 0.3);
+    }
+</style>
+<body>
+    <a href="https://www.youtube.com/">youtuve</a>
+    <ul>
+        <li>
+            <p>item</p>
+        </li>
+        <li>
+            <p>item</p>
+        </li>
+        <li>
+            <p>item</p>
+        </li>
+        <li>
+            <p>item</p>
+        </li>
+        <li>
+            <p>item</p>
+        </li>
+    </ul>
+</body>
+</html>
