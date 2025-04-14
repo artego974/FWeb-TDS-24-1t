@@ -1,0 +1,29 @@
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header img {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+    }
+
+    nav {
+        width: 90%;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .menu-opcoes {
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
