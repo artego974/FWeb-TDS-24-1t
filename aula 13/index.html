@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcao temp</title>
+</head>
+<style>
+
+</style>
+<body>
+    <main>
+        <img src="./inicial.jfif" alt="inicial">
+    </main>
+    <script>
+        let banner = ["./inicial.jfif","./final.jfif"]
+        let cont = 0
+        function trocaBanner() {
+            cont =(cont + 1)%2
+            document.querySelector("main img").src = banner[cont]
+        }
+        setInterval(trocaBanner,2000)
+    </script>
+</body>
+</html>

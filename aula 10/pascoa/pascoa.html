@@ -5,13 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pascoa</title>
   <style>
+    :root {
+      --bg-color: black;
+      --text-color: white;
+      --highlight-color: orangered;
+      --box-bg: rgba(255, 255, 255, 0.05);
+      --button-bg: orangered;
+      --button-text: white;
+      --section-border: #333;
+    }
+
+    body.light-mode {
+      --bg-color: white;
+      --text-color: black;
+      --highlight-color: darkorange;
+      --box-bg: rgba(0, 0, 0, 0.05);
+      --button-bg: darkorange;
+      --button-text: black;
+      --section-border: #ccc;
+    }
+
     body, html {
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
       padding: 0;
       width: 100%;
       height: 100%;
-      background-color: black;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
     }
 
     header {
@@ -20,26 +42,23 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: black;
+      flex-direction: column;
+      background-color: var(--bg-color);
     }
 
     header h1 {
       font-size: xx-large;
       font-weight: bolder;
-      color: orangered;
+      color: var(--highlight-color);
       text-shadow: 9px 4px 4px wheat;
       margin-left: 10px;
-    }
-
-    header img {
-      width: 100px;
-      height: 100px;
     }
 
     main {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       width: 100%;
       height: 70%;
     }
@@ -48,20 +67,20 @@
       height: 70%;
       width: 50%;
       border-radius: 20px;
-      border: #333 3px solid;
+      border: var(--section-border) 3px solid;
       animation: bordaSombra 4s linear infinite;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: rgba(255, 255, 255, 0.05);
+      background: var(--box-bg);
       padding: 20px;
       box-shadow: inset 0 0 30px 10px rgba(255, 255, 255, 0.2);
     }
 
     section h2 {
-      color: white;
-      text-shadow: 2px 2px 5px orangered;
+      color: var(--text-color);
+      text-shadow: 2px 2px 5px var(--highlight-color);
       margin-bottom: 20px;
       animation: brilhoTexto 2s infinite alternate;
     }
@@ -70,58 +89,159 @@
       width: 200px;
       height: auto;
       animation: pulse 2s infinite ease-in-out;
+      transition: transform 0.5s ease;
+    }
+
+    .girar {
+      animation: girar 1s ease-in-out;
+    }
+
+    .mensagem {
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      cursor: pointer;
+      box-shadow: 2px 2px 10px rgba(255, 165, 0, 0.7);
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes girar {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
 
     @keyframes bordaSombra {
-      0% {
-        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.2);
-      }
-      25% {
-        box-shadow: 10px 10px 20px 10px rgba(255, 255, 255, 0.2);
-      }
-      50% {
-        box-shadow: 0px 20px 20px 10px rgba(255, 255, 255, 0.2);
-      }
-      75% {
-        box-shadow: -10px 10px 20px 10px rgba(255, 255, 255, 0.2);
-      }
-      100% {
-        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.2);
-      }
+      0%, 100% { box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.2); }
+      25% { box-shadow: 10px 10px 20px 10px rgba(255, 255, 255, 0.2); }
+      50% { box-shadow: 0px 20px 20px 10px rgba(255, 255, 255, 0.2); }
+      75% { box-shadow: -10px 10px 20px 10px rgba(255, 255, 255, 0.2); }
     }
 
     @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
     }
 
     @keyframes brilhoTexto {
-      from {
-        text-shadow: 2px 2px 5px orangered;
+      from { text-shadow: 2px 2px 5px var(--highlight-color); }
+      to { text-shadow: 4px 4px 10px yellow; }
+    }
+
+    .hidden-message {
+      display: none;
+      margin-top: 15px;
+      color: yellow;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px var(--highlight-color);
+    }
+
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      animation: fall 3s linear forwards;
+      z-index: 9999;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 1;
       }
-      to {
-        text-shadow: 4px 4px 10px yellow;
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
       }
+    }
+
+    #mostraSurpresa {
+      background-color: #333;
+      color: white;
+    }
+
+    
+    #toggle-theme {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: transparent;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--highlight-color);
     }
   </style>
 </head>
 <body>
+  <button id="toggle-theme" onclick="alternarTema()">🌙</button>
+
   <header>
-    <img src="dia-de-pascoa.png" alt="Logo Páscoa" />
-    <h1>Feliz Páscoa</h1>
+    <button id="mostraSurpresa" onclick="mostrarSurpresa()">🎉 Surpresa!</button>
+    <div>
+      <h1 id="saudacao">Feliz Páscoa</h1>
+    </div>
+    <button class="mensagem" onclick="trocarSaudação()">Mudar pessoa</button>
   </header>
   <main>
     <section>
       <h2>Eu quero um:</h2>
-      <img src="ovo.png" alt="Ovo de Páscoa" />
+      <img src="ovo.png" alt="Ovo de Páscoa" id="ovoImg" />
+      <button class="mensagem" onclick="mostrarMensagem()">Me dar agora!</button>
+      <p id="mensagem" class="hidden-message">Você encontrou a mensagem secreta! 🐣💛</p>
     </section>
   </main>
+
+  <script>
+    function trocarSaudação(){
+      const nome = prompt("Qual seu nome?");
+      if (nome) {
+        document.getElementById("saudacao").textContent = `Feliz Páscoa, ${nome}! 🐰`;
+      }
+    }
+
+    function mostrarMensagem() {
+      alert("Este ovo é o melhor pra me dar! 😄");
+    }
+
+    function mostrarSurpresa() {
+      const mensagem = document.getElementById("mensagem");
+      mensagem.style.display = "block";
+      soltarConfete(50);
+    }
+
+    function soltarConfete(qtd) {
+      for (let i = 0; i < qtd; i++) {
+        const confete = document.createElement("div");
+        confete.classList.add("confetti");
+        confete.style.left = Math.random() * window.innerWidth + "px";
+        confete.style.top = "-10px";
+        confete.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        confete.style.animationDuration = (Math.random() * 2 + 2) + "s";
+        document.body.appendChild(confete);
+        setTimeout(() => confete.remove(), 3000);
+      }
+    }
+
+    const ovo = document.getElementById("ovoImg");
+    ovo.addEventListener("mouseenter", () => ovo.classList.add("girar"));
+    ovo.addEventListener("animationend", () => ovo.classList.remove("girar"));
+
+    function alternarTema() {
+      document.body.classList.toggle("light-mode");
+      const btn = document.getElementById("toggle-theme");
+      btn.textContent = document.body.classList.contains("light-mode") ? "☀️" : "🌙";
+    }
+  </script>
 </body>
 </html>

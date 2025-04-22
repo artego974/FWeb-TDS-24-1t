@@ -1,0 +1,27 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,body{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    margin-top: 2%;
+    font-size: x-large;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }

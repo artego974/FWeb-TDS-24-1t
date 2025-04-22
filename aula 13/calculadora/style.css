@@ -1,0 +1,67 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+main {
+    width: 320px;
+    background-color: #2e2e2e;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#text {
+    width: 95%;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: start;
+    border: none;
+    border-radius: 8px;
+    background-color: #444;
+    color: white;
+}
+
+#botao {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #888;
+}
+button.op{
+    background-color: rgb(0, 185, 185);
+    grid-column: span 4;
+}
+button.ac {
+    background-color: red;
+}
+
+button.ac:hover {
+    background-color: #e74c3c;
+}
