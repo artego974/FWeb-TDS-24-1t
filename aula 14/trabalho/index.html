@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
     <style>
        body {
@@ -28,7 +29,12 @@
     .border-bottom {
       border-bottom: 1px solid #ff4c4c !important;
     }
-
+    h1, h2, h3, h4, h5, h6, p, a{
+      font-family: italic;
+    }
+    p{
+      color: #f8f9fa;
+    }
     .custom-header {
       padding-top: 1rem;
       padding-bottom: 1rem;
@@ -47,7 +53,10 @@
       color: #ff4c4c;
       border-bottom: 2px solid #ff4c4c;
     }
-
+    #img-fort{
+      height: 400px;
+      width: 300px;
+    }
     .table tbody tr:hover {
       background-color: #1a1a1a;
     }
@@ -74,6 +83,9 @@
     footer {
       background-color: #111;
       color: #aaa;
+    }
+    footer p{
+      color: #fff;
     }
 
     .blockquote {
@@ -105,13 +117,14 @@
               Fortnite revolucionou o mundo dos games com sua mistura única de batalha real, construção e cultura pop.
               Com milhões de jogadores ao redor do mundo, tornou-se um fenômeno global e um ícone da era digital.
             </p>
-            <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+            <p class="lead mb-0"><a href="#historia-fortnite" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+
           </div>
-          <div class="col-md-4 text-end">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTawLhA5inNGFX4kEB_8J2XdtzEknx-mo7MA&s"
+          <div class="col-md-4 text-end" >
+            <img id="img-fort" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTawLhA5inNGFX4kEB_8J2XdtzEknx-mo7MA&s"
                  alt="Imagem do Fortnite"
                  class="img-fluid rounded"
-                 style="max-width: 250px;">
+                 style="max-width: 2500px;">
           </div>
         </div>
       </div>
@@ -122,195 +135,95 @@
     <div class="row g-5">
       <div class="col-md-8">
         <h3 class="pb-4 mb-4 fst-italic border-bottom">
-          From the Firehose
+          Sobre o jogo:
         </h3>
-  
+        
         <article class="blog-post">
-          <h2 class="display-5 link-body-emphasis mb-1">Sample blog post</h2>
-          <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-  
-          <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
-          <hr>
-          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-          <h2>Blockquotes</h2>
-          <p>This is an example blockquote in action:</p>
-          <blockquote class="blockquote">
-            <p>Quoted text goes here.</p>
-          </blockquote>
-          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-          <h3>Example lists</h3>
-          <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout. This is an example unordered list:</p>
-          <ul>
-            <li>First list item</li>
-            <li>Second list item with a longer description</li>
-            <li>Third list item to close it out</li>
-          </ul>
-          <p>And this is an ordered list:</p>
-          <ol>
-            <li>First list item</li>
-            <li>Second list item with a longer description</li>
-            <li>Third list item to close it out</li>
-          </ol>
-          <p>And this is a definition list:</p>
-          <dl>
-            <dt>HyperText Markup Language (HTML)</dt>
-            <dd>The language used to describe and define the content of a Web page</dd>
-            <dt>Cascading Style Sheets (CSS)</dt>
-            <dd>Used to describe the appearance of Web content</dd>
-            <dt>JavaScript (JS)</dt>
-            <dd>The programming language used to build advanced Web sites and applications</dd>
-          </dl>
-          <h2>Inline HTML elements</h2>
-          <p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
-          <ul>
-            <li><strong>To bold text</strong>, use <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
-            <li><em>To italicize text</em>, use <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
-            <li>Abbreviations, like <abbr title="HyperText Markup Language">HTML</abbr> should use <code class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code class="language-plaintext highlighter-rouge">title</code> attribute for the full phrase.</li>
-            <li>Citations, like <cite>— Mark Otto</cite>, should use <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
-            <li><del>Deleted</del> text should use <code class="language-plaintext highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins> text should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
-            <li>Superscript <sup>text</sup> uses <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
-          </ul>
-          <p>Most of these elements are styled by browsers with few modifications on our part.</p>
-          <h2>Heading</h2>
-          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-          <h3>Sub-heading</h3>
-          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-          <pre><code>Example code block</code></pre>
-          <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+          <h2 class="display-5 link-body-emphasis mb-1 no-hover-color" id="historia-fortnite">História do Fortnite</h2>
+          <p class="blog-post-meta">Abril 23, 2025 by <a href="#">Arthur</a></p>
+        
+          <h2>O Início em 2017</h2>
+          <p>Fortnite é um dos maiores fenômenos da história dos videogames, e sua trajetória desde 2017 até os dias de hoje, em 2025, é uma verdadeira epopeia da cultura digital moderna. Desenvolvido pela Epic Games, o jogo foi inicialmente concebido como um título cooperativo de sobrevivência chamado "Save the World", lançado em julho de 2017. Nessa primeira versão, os jogadores se uniam para combater hordas de criaturas em um ambiente pós-apocalíptico, coletando recursos e construindo fortificações. Embora o jogo tivesse ideias promissoras, foi a versão Battle Royale, lançada apenas dois meses depois, em setembro de 2017, que transformou Fortnite em um sucesso global quase imediato.</p>
+        
+          <h2>Ascensão do Battle Royale</h2>
+          <p>A versão Battle Royale introduziu uma fórmula simples e viciante: cem jogadores em uma ilha disputando quem seria o último sobrevivente, tudo isso em um ambiente colorido, acessível e gratuito. A possibilidade de construir estruturas durante o combate dava ao jogo uma profundidade estratégica única, enquanto o estilo visual cartunesco e a mecânica ágil conquistavam públicos de todas as idades.</p>
+        
+          <h2>Explosão de Popularidade</h2>
+          <p>A Epic Games aproveitou o sucesso repentino para implementar um sistema de temporadas e passes de batalha, que garantiam novos conteúdos regulares, incluindo roupas, acessórios e danças que rapidamente ultrapassaram o universo virtual e se tornaram parte da cultura pop. Durante os anos de 2018 e 2019, Fortnite passou de um jogo de sucesso para um verdadeiro fenômeno global. As temporadas traziam alterações constantes no mapa e narrativas progressivas que prendiam a atenção da comunidade.</p>
+        
+          <h2>Eventos e Cultura Pop</h2>
+          <p>Jogadores do mundo todo se reuniam para participar de eventos ao vivo, como a colisão de meteoros, invasões alienígenas e batalhas entre monstros gigantes e robôs. Nesse mesmo período, o jogo se envolveu em colaborações ambiciosas com franquias como Marvel, DC, Star Wars, Stranger Things e muitas outras, trazendo personagens famosos para dentro do universo do jogo. Danças e emotes do Fortnite viralizaram na internet e em festas, sendo replicadas por atletas, celebridades e influenciadores digitais.</p>
+        
+          <h2>Fortnite na Pandemia</h2>
+          <p>Em 2020, com a chegada da pandemia de COVID-19, Fortnite encontrou novas maneiras de se conectar com seu público. Com bilhões de pessoas em casa, o jogo se transformou em uma espécie de espaço social alternativo. A Epic introduziu modos como o Party Royale, onde os jogadores podiam interagir sem combates, assistir a shows, filmes ou simplesmente socializar. Um dos momentos mais marcantes dessa fase foi o show virtual de Travis Scott, realizado em abril de 2020, que reuniu mais de doze milhões de jogadores simultaneamente em uma experiência audiovisual inédita para o mundo dos jogos.</p>
+        
+          <h2>Capítulos e Evolução do Jogo</h2>
+          <p>Nos anos seguintes, a narrativa de Fortnite ficou ainda mais rica e complexa. A Epic passou a dividir o jogo em grandes capítulos, cada um marcando uma nova era com mudanças significativas no mapa, nos personagens e nas mecânicas de jogo. O Capítulo 2 trouxe gráficos atualizados e novas interações como nadar, pescar e dirigir veículos. O Capítulo 3 apresentou um mundo invertido e contou com grandes eventos que conectavam diferentes franquias em um multiverso interativo, com participações de heróis de quadrinhos, personagens de animes e até celebridades como The Rock.</p>
+        
+          <h2>O Nascimento do Metaverso Fortnite</h2>
+          <p>Em 2023, a Epic lançou o Unreal Editor for Fortnite, uma ferramenta que permitia que criadores desenvolvessem seus próprios jogos dentro do ecossistema do Fortnite, com gráficos e mecânicas avançadas. Isso marcou o início da transformação da plataforma em um espaço criativo quase ilimitado. Além disso, novos modos oficiais surgiram, como o LEGO Fortnite, que misturava sobrevivência e construção com estética de blocos, o Rocket Racing, um jogo de corrida futurista, e o Fortnite Festival, um jogo musical no estilo Guitar Hero com canções de artistas populares.</p>
+        
+          <h2>O Presente e o Futuro</h2>
+          <p>Em 2025, Fortnite é um verdadeiro universo digital interativo. A base de jogadores continua forte e ativa, e o ecossistema de criadores cresceu exponencialmente, permitindo que jogadores de todo o mundo criem e compartilhem suas próprias ideias, desde minijogos até narrativas cinematográficas. A Epic Games segue inovando com colaborações com marcas de moda, estúdios de cinema, plataformas de streaming e artistas musicais. O jogo é usado até mesmo como ferramenta educacional em algumas escolas, mostrando seu impacto muito além do entretenimento. Fortnite começou como um projeto modesto, mas se transformou em um pilar da cultura digital contemporânea. Com sua capacidade constante de se reinventar, de se adaptar ao momento e de criar novas formas de interação e diversão, tornou-se mais do que um fenômeno passageiro — tornou-se um símbolo do futuro dos jogos e da convergência entre tecnologia, arte e comunidade.</p>
         </article>
+        
   
-        <article class="blog-post">
-          <h2 class="display-5 link-body-emphasis mb-1">Another blog post</h2>
-          <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p>
-  
-          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-          <blockquote>
-            <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.</p>
-          </blockquote>
-          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-          <h3>Example table</h3>
-          <p>And don't forget about tables in these posts:</p>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Upvotes</th>
-                <th>Downvotes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Alice</td>
-                <td>10</td>
-                <td>11</td>
-              </tr>
-              <tr>
-                <td>Bob</td>
-                <td>4</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td>Charlie</td>
-                <td>7</td>
-                <td>9</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td>Totals</td>
-                <td>21</td>
-                <td>23</td>
-              </tr>
-            </tfoot>
-          </table>
-  
-          <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
-        </article>
-  
-        <article class="blog-post">
-          <h2 class="display-5 link-body-emphasis mb-1">New feature</h2>
-          <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p>
-  
-          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-          <ul>
-            <li>First list item</li>
-            <li>Second list item with a longer description</li>
-            <li>Third list item to close it out</li>
-          </ul>
-          <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
-        </article>
-  
-        <nav class="blog-pagination" aria-label="Pagination">
-          <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
-          <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
-        </nav>
+        
   
       </div>
   
       <div class="col-md-4">
         <div class="position-sticky" style="top: 2rem;">
           <div class="p-4 mb-3 bg-body-tertiary rounded">
-            <h4 class="fst-italic">About</h4>
-            <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
+            <h4 class="fst-italic">Sobre</h4>
+            <p class="mb-0">O site tem o intuito de mostrar como ocorreu a historia do fortnite ao decorrer dos anos. E como ele se tornou um dos maiores jogos do mundo.</p>
           </div>
   
           <div>
             <h4 class="fst-italic">Recent posts</h4>
             <ul class="list-unstyled">
-              <li>
-                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#777"/></svg>
-                  <div class="col-lg-8">
-                    <h6 class="mb-0">Example blog post title</h6>
-                    <small class="text-body-secondary">January 15, 2024</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#777"/></svg>
-                  <div class="col-lg-8">
-                    <h6 class="mb-0">This is another blog post title</h6>
-                    <small class="text-body-secondary">January 14, 2024</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#777"/></svg>
-                  <div class="col-lg-8">
-                    <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
-                    <small class="text-body-secondary">January 13, 2024</small>
-                  </div>
-                </a>
-              </li>
+                <li>
+                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="https://www.fortnite.com/news/welcome-to-fortnite-battle-royale-chapter-4-season-1?lang=pt-BR">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0tTnM4uk5IwY56LCTohM4q7i_qTQgRWyRmw&s" alt="Fortnite Capítulo 4" width="150" height="96" class="rounded">
+                        <div class="col-lg-8">
+                            <h6 class="mb-0">Fortnite Capítulo 4: Terras Selvagens</h6>
+                            <small class="text-body-secondary">Março 14, 2025</small>
+                            <p class="mb-0 small">Explore as novas florestas tropicais, cavernas escondidas...</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="https://diariodonordeste.verdesmares.com.br/entretenimento/geek/minisserie-em-quadrinhos-fortnite-x-marvel-zero-war-sera-lancada-em-junho-1.3199061">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4_Lo2kOzwhqOEtEdli_mzV-lnbpU6KVSepA&s" width="150" height="96" class="rounded">
+                        <div class="col-lg-8">
+                            <h6 class="mb-0">Fortnite x Marvel: A união de universos</h6>
+                            <small class="text-body-secondary">Março 10, 2025</small>
+                            <p class="mb-0 small">Relembre os momentos épicos da colaboração...</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="https://dev.epicgames.com/community/fortnite/getting-started/uefn?locale=pt-br">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1-lNeuX4ikpSn-_DStaHPsk9MbNnfg1Ivpg&s" alt="Editor do Fortnite" width="150" height="96" class="rounded">
+                        <div class="col-lg-8">
+                            <h6 class="mb-0">O poder da criação: Unreal Editor no Fortnite</h6>
+                            <small class="text-body-secondary">Fevereiro 27, 2025</small>
+                            <p class="mb-0 small">Criadores do mundo todo estão moldando o futuro do jogo...</p>
+                        </div>
+                    </a>
+                </li>
             </ul>
-          </div>
+        </div>
+          
+  
+          
   
           <div class="p-4">
-            <h4 class="fst-italic">Archives</h4>
-            <ol class="list-unstyled mb-0">
-              <li><a href="#">March 2021</a></li>
-              <li><a href="#">February 2021</a></li>
-              <li><a href="#">January 2021</a></li>
-              <li><a href="#">December 2020</a></li>
-              <li><a href="#">November 2020</a></li>
-              <li><a href="#">October 2020</a></li>
-              <li><a href="#">September 2020</a></li>
-              <li><a href="#">August 2020</a></li>
-              <li><a href="#">July 2020</a></li>
-              <li><a href="#">June 2020</a></li>
-              <li><a href="#">May 2020</a></li>
-              <li><a href="#">April 2020</a></li>
-            </ol>
-          </div>
-  
-          <div class="p-4">
-            <h4 class="fst-italic">Elsewhere</h4>
+            <h4 class="fst-italic">Criador</h4>
             <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Social</a></li>
-              <li><a href="#">Facebook</a></li>
+              <li><a href="https://github.com/artego974">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/arthur-mattjie-aba299304/">Linkedin</a></li>
+              <li><a href="https://www.instagram.com/city_artthur/">Instagram</a></li>
             </ol>
           </div>
         </div>
@@ -320,14 +233,12 @@
   </main>
   
   <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
-    <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://x.com/mdo">@mdo</a>.</p>
+    <p>&copy; 2025 Arthur C Mattjie.</p>
     <p class="mb-0">
-      <a href="#">Back to top</a>
+      <a href="#">Voltar ao topo</a>
     </p>
-  </footer>
-  <script defer src="../assets/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"></script>
-  
-     
-  
+</footer>
+<script defer src="../assets/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"></script>
+
 </body>
 </html>
