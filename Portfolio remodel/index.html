@@ -8,20 +8,32 @@
     <link rel="stylesheet" href="./css/stlye.css">
 </head>
 <body>
-    <header>
+    <header class="hidden">
         <a href="#Home">Home</a>
         <a href="#contato">Contato</a>
         <a href="#conteudo">Conteudo</a>
         <a href="#blog">Blog</a>
     </header>
     <main>
-        <section id="Home"></section>
-        <section id="contato"></section>
-        <section id="conteudo"></section>
-        <section id="blog"></section>
+        <section class="hidden" id="Home">
+            <section class="text-logo">
+                <h1>Arthur Mattjie</h1>
+                <p>Olá meu nome é arthur, <br> um estudante do <br> ensino médio senac e dev full-stack!</p>
+            </section>
+            <section id="foto" class="text-logo">
+                <img src="./assets/foto.png" alt="foto-autor">
+            </section>
+        </section>
+        <section class="hidden" id="conteudo">
+            <h2>Conteudos</h2>
+            <div class="cards-container">
+            </div>
+          </section>          
+        <section class="hidden" id="blog"></section>
+        <section class="hidden" id="contato"></section>
     </main>
     <footer>
-
+    
     </footer>
     <script src="./src/script.js"></script>
 </body>
