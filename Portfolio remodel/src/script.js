@@ -15,8 +15,8 @@ elemts.forEach((elemnt) => {
 const conteudoSection = document.querySelector("#conteudo .cards-container");
 
 const exerciciosPorAula = [
-  3, 1, 6, 2, 4, 3, 5, 1, 2, 3,
-  6, 4, 3, 2, 1, 3, 2, 4, 5, 1,
+  3, 5, 1, 1, 2, 2, 2, 1, 1, 4,
+  2, 0, 2, 1, 1, 3, 2, 4, 5, 1,
   3, 6, 2, 4
 ]; 
 

@@ -1,14 +1,14 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 html,body{
     background-color: black;
     height: 100%;
     width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     scroll-behavior: smooth;
 }
 header{
@@ -154,15 +154,15 @@ a:hover{
   }
   
   .hidden {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
     opacity: 0;
     filter: blur(15px);
-    transition: all 1s ease-in-out;  
+    transition: all 1.5s ease-out;  
 }
 
 .show {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
     filter: blur(0);
-    transition: all 1s ease-in-out;  
+    transition: all 1.5s ease-out;  
 }
