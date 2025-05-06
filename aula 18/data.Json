@@ -1,0 +1,26 @@
+{
+    "pessoas":[
+        {
+            "nome": "João",
+            "idade": 25,
+            "local": {
+                "cidade": "São Paulo",
+                "estado": "SP"
+            }
+        }, {
+            "nome": "Maria",
+            "idade": 30,
+            "local": {
+                "cidade": "Rio de Janeiro",
+                "estado": "RJ"
+            }
+        }, {
+            "nome": "Pedro",
+            "idade": 35,
+            "local": {
+                "cidade": "Belo Horizonte",
+                "estado": "MG"
+            }
+        }
+    ]
+}
