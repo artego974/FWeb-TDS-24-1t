@@ -1,0 +1,14 @@
+{
+    "alunos": [
+      { "nome": "João", "curso": "Engenharia" },
+      { "nome": "Maria", "curso": "Direito" },
+      { "nome": "Pedro", "curso": "Engenharia" },
+      { "nome": "Ana", "curso": "Medicina" },
+      { "nome": "Lucas", "curso": "Direito" },
+      { "nome": "Carla", "curso": "Design" },
+      { "nome": "Renato", "curso": "Medicina" },
+      { "nome": "Lívia", "curso": "Design" },
+      { "nome": "Fernando", "curso": "Engenharia" }
+    ]
+  }
+  

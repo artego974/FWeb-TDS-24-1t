@@ -1,0 +1,19 @@
+{
+    "pessoas":[
+        {
+            "nome": "João"
+        },
+        {
+            "nome": "Maria"
+        },
+        {
+            "nome": "Pedro"
+        },
+        {
+            "nome": "Ana"
+        },
+        {
+            "nome": "Luiz"
+        }
+    ]
+}
