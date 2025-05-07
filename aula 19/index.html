@@ -3,17 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
+    <title>Pokédex</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <main>
-        <section id="pokemon-selecionado">
-
-        </section>
-        <section class="pokemon-escolher">
-
-        </section>
+        <div id="container">
+            <figure id="figPK">
+                <img src="./assets/Cópia de pokedex (1).png" alt="Imagem Pokedex">
+            </figure>
+            <figure id="imgPK">
+                <img id="fotoPK" src="" alt="Imagem Pokemon">
+            </figure>
+        <form id="formPK" action="">
+            <input id="inputPK" type="text">
+        </form>
+        <div id="nome"> 
+            <span id="nomePK">Nome</span>
+            <span id="idPK">ID</span>
+           
+        </div>
+        <div id="info1">
+            <span id="tipo1PK">Tipo1</span>
+            <span id="tipo2PK">Tipo2</span>
+        </div>
+        <div id="info2">
+            <div id="habiPK">Habilidade</div>
+            <div id="pesoPK">Peso</div>
+            <div id="alturaPK">Altura</div>
+        </div>
+        <div id="botoes">
+            <button id="btnVoltar">Voltar</button>
+            <button id="btnProximo">Proximo</button>
+        </div>
+    </div>
     </main>
     <script src="./src/script.js"></script>
 </body>

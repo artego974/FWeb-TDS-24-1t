@@ -1,26 +1,43 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-html,body{
-    height: 100%;
-    width: 100%;
-    background-color: #b00610;
-}
 main{
-    display: flex;
-    align-items: center;
-    height: 100%;
     width: 100%;
-    flex-direction: column;
-}
-#pokemon-selecionado{
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #fff ;
-    border: 5px #333 solid;
-    width: 85%;
-    height: 35%;
+}
+figure{
+    width: 400px;
+    height: 600px;
+}
+#container{
+    position:relative;
+}
+#imgPK{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+#formPK{
+    position: absolute;
+    top: 50%;
+    left: 32%;
+}
+#nome{
+    position: relative;
+    bottom:28%;
+    left: 30%;
+}
+#info1{
+    position: relative;
+    bottom: 25%;
+    left: 30%;
+}
+#info2{
+    position: relative;
+    bottom: 25%;
+    left: 30%;
+}
+#botoes{
+    position: relative;
+    bottom: 20%;
+    left: 55%;
 }
