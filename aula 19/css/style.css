@@ -72,6 +72,7 @@ figure {
   color: white;
   background-color: #444;
   box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+  content: box;
   bottom: 100%;
 }
 @media screen {
