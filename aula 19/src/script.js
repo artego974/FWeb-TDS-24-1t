@@ -1,13 +1,17 @@
+// div da nome
 let imgPK = document.querySelector("#fotoPK"); 
 let formPK = document.querySelector("#formPK");
 let inputPK = document.querySelector("#inputPK");
 
+// div nome
 let idPK = document.querySelector("#idPK");
 let nomePK = document.querySelector("#nomePK");
 
+// tipo
 let tipo1 = document.querySelector("#tipo1PK");
 let tipo2 = document.querySelector("#tipo2PK");
 
+// 
 let habiPK = document.querySelector("#habiPK");
 let pesoPK = document.querySelector("#pesoPK");
 let alturaPK = document.querySelector("#alturaPK");
@@ -25,10 +29,10 @@ musicaFundo.loop = true;
 btnSom.addEventListener("click", () => {
     if (musicaFundo.paused) {
         musicaFundo.play();
-        btnSom.textContent = "Pausar Música";
+        btnSom.textContent = "Pausar";
     } else {
         musicaFundo.pause();
-        btnSom.textContent = "Música Pokémon";
+        btnSom.textContent = "Play";
     }
 });
 

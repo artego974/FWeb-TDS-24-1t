@@ -31,7 +31,7 @@ figure {
 }
 #formPK {
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 32%;
 }
 #inputPK{
@@ -42,7 +42,7 @@ figure {
 }
 #nome {
   position: relative;
-  bottom: 28%;
+  bottom: 40%;
   left: 30%;
 }
 #info1 {
@@ -57,14 +57,14 @@ figure {
 }
 #botoes {
   position: relative;
-  bottom: 20%;
+  bottom: 50%;
   left: 55%;
 }
 #btnVoltar,
 #btnProximo,
 #btnSom {
   width: 20%;
-  padding: 4%;
+  padding: 2%;
   border: 2px solid #000;
   border-radius: 5px;
   font-size: clamp(8px, 5vw, 1rem);
@@ -72,6 +72,7 @@ figure {
   color: white;
   background-color: #444;
   box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+  bottom: 100%;
 }
 @media screen {
   figure {
