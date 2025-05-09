@@ -61,7 +61,8 @@ figure {
   left: 55%;
 }
 #btnVoltar,
-#btnProximo {
+#btnProximo,
+#btnSom {
   width: 20%;
   padding: 4%;
   border: 2px solid #000;
