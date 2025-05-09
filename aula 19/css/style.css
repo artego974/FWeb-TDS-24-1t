@@ -3,6 +3,7 @@ body {
   background: linear-gradient(to bottom, #6ab7f5, #fff);
   min-height: 100vh;
   font-size: large;
+  background-size: 90% 120%;
 }
 main {
   width: 100%;
